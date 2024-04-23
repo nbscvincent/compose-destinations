@@ -37,9 +37,15 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.ActivityNavigator
+import androidx.navigation.compose.rememberNavController
+import com.ramcosta.composedestinations.DestinationsNavHost
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.annotation.NavGraph
 import com.ramcosta.composedestinations.annotation.RootNavGraph
+import com.ramcosta.composedestinations.navigation.DestinationsNavigator
+import com.simangcaj.composedestination.destinations.SecondScreenDestination
+import com.simangcaj.composedestination.destinations.ThirdScreenDestination
 import com.simangcaj.composedestination.ui.theme.ComposeDestinationTheme
 import kotlinx.coroutines.launch
 
@@ -48,15 +54,23 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             ComposeDestinationTheme {
-                FirstScreen()
+                MainScreen()
             }
         }
     }
 }
 
+@Composable
+private fun MainScreen() {
+    DestinationsNavHost(navGraph = NavGraphs.root)
+}
+
+@Destination(start = true)
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun FirstScreen() {
+fun FirstScreen(
+    navigator: DestinationsNavigator
+) {
 
     var textField by remember { mutableStateOf("") }
 
@@ -95,7 +109,7 @@ fun FirstScreen() {
             Spacer(modifier = Modifier.height(15.dp))
             Button(
                 onClick = {
-
+                    navigator.navigate(SecondScreenDestination)
                 },
                 modifier = Modifier
                     .fillMaxWidth()
@@ -115,7 +129,7 @@ fun FirstScreen() {
             Spacer(modifier = Modifier.height(15.dp))
             Button(
                 onClick = {
-
+                          navigator.navigate(ThirdScreenDestination(textField))
                 },
                 modifier = Modifier
                     .fillMaxWidth()
