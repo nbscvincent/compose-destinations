@@ -1,4 +1,4 @@
-package com.simangcaj.composedestination
+package com.evangelista.composedestination
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

@@ -1,4 +1,4 @@
-package com.simangcaj.composedestination
+package com.evangelista.composedestination
 
 import org.junit.Test
 

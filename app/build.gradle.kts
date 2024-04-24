@@ -8,11 +8,11 @@ plugins {
 }
 
 android {
-    namespace = "com.simangcaj.composedestination"
+    namespace = "com.evangelista.composedestination"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.simangcaj.composedestination"
+        applicationId = "com.evangelista.composedestination"
         minSdk = 27
         targetSdk = 34
         versionCode = 1
