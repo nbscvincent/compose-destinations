@@ -1,7 +1,6 @@
 package com.escanillajd.composedestination.screens
 
 import android.annotation.SuppressLint
-import android.graphics.Color
 import android.icu.text.SimpleDateFormat
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -20,6 +19,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -61,7 +61,9 @@ fun SecondScreen(
                     .fillMaxWidth()
                     .padding(start = 25.dp, end = 25.dp),
             )
-            Spacer(modifier = Modifier.height(15.dp))
+
+
+            Spacer(modifier = Modifier.height(50.dp))
             Button(
                 onClick = {
 
@@ -72,7 +74,7 @@ fun SecondScreen(
                     .fillMaxWidth()
                     .padding(start = 25.dp, end = 25.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor,
+                    containerColor = Color(0xFF783137)
                 ),
                 shape = RoundedCornerShape(10.dp),
             ) {

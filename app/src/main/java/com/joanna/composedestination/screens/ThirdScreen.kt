@@ -54,7 +54,7 @@ fun ThirdScreen (
                     .fillMaxWidth()
                     .padding(start = 25.dp, end = 25.dp),
             )
-            Spacer(modifier = Modifier.height(15.dp))
+            Spacer(modifier = Modifier.height(50.dp))
             Button(
                 onClick = {
                     navigator.navigate(FirstScreenDestination)

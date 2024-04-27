@@ -54,13 +54,14 @@ fun FirstScreen(
 
         Column(
             modifier = Modifier
+                .padding(20.dp)
                 .fillMaxSize()
                 .fillMaxWidth()
                 .background(Color.White),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(0.dp)
         ) {
-            Spacer(modifier = Modifier.height(50.dp))
+            Spacer(modifier = Modifier.height(30.dp))
             OutlinedTextField(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -82,7 +83,7 @@ fun FirstScreen(
                 },
                 singleLine = true,
             )
-            Spacer(modifier = Modifier.height(25.dp))
+            Spacer(modifier = Modifier.height(50.dp))
             Button(
                 onClick = {
 
